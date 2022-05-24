@@ -3,6 +3,12 @@ spring:
     name: "acme-catalog"
   mvc:
     static-path-pattern: /static/images/**
+  web:
+    resources:
+      cache:
+        cachecontrol:
+          max-age: 3600
+          cache-public: true
   config:
     activate:
       on-profile: default
